@@ -23,4 +23,9 @@ public class VideojuegoFisico extends Videojuego {
     public double calculateCost(){
         return getPrice() + DEF_SEND;
     }
+
+    @Override
+    public boolean isCompatible(Console console) {
+        return console.equals(getPlataform());
+    }
 }

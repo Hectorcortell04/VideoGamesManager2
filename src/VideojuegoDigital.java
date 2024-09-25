@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class VideojuegoDigital extends Videojuego {
 
 
@@ -5,9 +7,6 @@ public class VideojuegoDigital extends Videojuego {
     private double disc;
     private static final double DEF_DISC = 0.15;
 
-    public double calculateCost() {
-        return getPrice() - (DEF_DISC);
-    }
 
     public VideojuegoDigital(String name, String plat, double price, Genero genero, double disc) {
         super(name, plat, price, genero);
@@ -18,9 +17,21 @@ public class VideojuegoDigital extends Videojuego {
         }
     }
 
+    public double calculateCost() {
+        return getPrice() - (DEF_DISC);
+    }
 
     public boolean ValidateDisc(double disc) {
         return disc >= 0.0 && disc <= 1.0;
 
     }
+
+    public boolean isCompatible(Console console) {
+        return console.equals(getPlataform());
+    }
+
+    public String toString() {
+        return super.toString() + String.format(Locale.ENGLISH, "%02.2f", calculateCost());
+    }
+
 }

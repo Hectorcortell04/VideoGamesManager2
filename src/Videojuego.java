@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public abstract class Videojuego {
 
     protected String name;
@@ -75,12 +77,16 @@ public abstract class Videojuego {
     private boolean validateName(String name) {
         return name != null && !name.isEmpty();
     }
+
     private boolean validateCost(double cost) {
         return cost >= 0;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return String.format(Locale.ENGLISH, "%s %s %f %s ", name, plataform, price, genero);
     }
+
+    public abstract boolean isCompatible(Console console);
+
 }

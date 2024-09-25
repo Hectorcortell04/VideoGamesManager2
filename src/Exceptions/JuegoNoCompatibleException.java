@@ -1,7 +1,7 @@
 package Exceptions;
 
 public class JuegoNoCompatibleException extends RuntimeException {
-    public JuegoNoCompatibleException(String message) {
-        super(message);
+    public JuegoNoCompatibleException() {
+        System.out.println("El juego NO es compatible con la plataforma");
     }
 }
