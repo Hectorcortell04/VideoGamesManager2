@@ -8,8 +8,8 @@ public class VideojuegoDigital extends Videojuego {
     private static final double DEF_DISC = 0.15;
 
 
-    public VideojuegoDigital(String name, String plat, double price, Genero genero, double disc) {
-        super(name, plat, price, genero);
+    public VideojuegoDigital(String name, Plataforma plataforma, double price, Genero genero, double disc) {
+        super(name, plataforma, price, genero);
         if (ValidateDisc(disc)) {
             this.disc = disc;
         } else {

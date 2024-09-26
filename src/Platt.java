@@ -20,7 +20,7 @@ public class Platt implements Console {
     }
 
     public void installGame(Videojuego vdj) throws JuegoNoCompatibleException {
-        System.out.printf("Instalando %s en %s", vdj.getName(), getPlatform());
+        System.out.printf("Instalando %s en %s%n", vdj.getName(), getPlatform());
     }
 
     public void playGame(Videojuego vdj) {

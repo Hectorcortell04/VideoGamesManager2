@@ -3,8 +3,12 @@
 public class TiendaVideojuegos {
     public static void main(String[] args) {
 
-        System.out.println("The Last Of Us 1");
-
+// Instanciar la clase Platt
+        Platt p = new Platt();
+        Videojuego v = new VideojuegoDigital("Spiderman", Plataforma.PLAYSTATION, 55.00, Genero.ACCION,0.15);
+        p.switchOn();
+        p.installGame(v);
+        p.switchOff();
 
 
     }

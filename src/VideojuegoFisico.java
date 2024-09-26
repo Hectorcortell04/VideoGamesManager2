@@ -7,8 +7,8 @@ public class VideojuegoFisico extends Videojuego {
         return getPrice() + (send);
     }
 
-    public VideojuegoFisico(String name, String plat, double price, Genero genero, double send) {
-        super(name, plat, price, genero);
+    public VideojuegoFisico(String name, Plataforma plataforma, double price, Genero genero, double send) {
+        super(name, plataforma, price, genero);
         if (ValidateSend(send)) {
             this.send = send;
         } else {

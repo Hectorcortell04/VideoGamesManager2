@@ -19,7 +19,7 @@ public abstract class Videojuego {
         this.genero = DEF_GENERO;
     }
 
-    public Videojuego(String nombre, String plataforma, double precio, Genero genero) {
+    public Videojuego(String nombre, Plataforma plataforma, double precio, Genero genero) {
         if (validateName(nombre)) {
             this.name = nombre;
         } else {
