@@ -18,7 +18,7 @@ public class VideojuegoDigital extends Videojuego {
     }
 
     public double calculateCost() {
-        return getPrice() - (DEF_DISC);
+        return getPrice() - (DEF_DISC * getPrice());
     }
 
     public boolean ValidateDisc(double disc) {

@@ -30,6 +30,8 @@ public abstract class Videojuego {
         } else {
             this.price = DEF_PRICE;
         }
+        this.plataform = plataforma;
+        this.genero = genero;
     }
 
 
@@ -84,9 +86,11 @@ public abstract class Videojuego {
 
     @Override
     public String toString() {
-        return String.format(Locale.ENGLISH, "%s %s %f %s ", name, plataform, price, genero);
+        return String.format(Locale.ENGLISH, "%s %s %.2f %s ", name, plataform, price, genero);
     }
 
     public abstract boolean isCompatible(Console console);
+
+
 
 }

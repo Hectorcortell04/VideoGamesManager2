@@ -1,13 +1,14 @@
 import Exceptions.JuegoNoCompatibleException;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface Console {
-    void switchOn();
+    void switchOn() throws FileNotFoundException;
 
     void switchOff();
 
-    void installGame(Videojuego vdj) throws JuegoNoCompatibleException;
+    void installGame(Videojuego vdj) throws JuegoNoCompatibleException, IOException;
 
     void playGame(Videojuego vdj);
 }
